@@ -1,0 +1,14 @@
+<h3>My Tasks</h3>
+
+
+<div class= "mt-3">
+  <% @tasks.each do |task| %>
+  <input type="checkbox" name="task" value="task">
+  <label for="task"><a href="http://localhost:3000/tasks/<%= task.id %>"><%= task.title %></a></label><br>
+  <% end %>
+</div>
+
+
+<div>
+<%= link_to "Add Task", new_task_path %>
+</div>
